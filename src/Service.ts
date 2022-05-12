@@ -1,16 +1,16 @@
-import axios, { AxiosResponse } from "axios"
+import axios, { AxiosResponse } from "axios";
 
-const Http = axios.create()
+const Http = axios.create();
 
 class Service {
-    protected static Http = Http
-    protected static getData = getData
+  protected static Http = Http;
+  protected static getData = getData;
 }
 
 function getData<T>(res: AxiosResponse<T>) {
-    return res.data
+  return res.data;
 }
 
-Http.defaults.baseURL = 'http://localhost:8080'
+Http.defaults.baseURL = "http://localhost:8080";
 
-export default Service
+export default Service;
